@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tic Tac Toe</h1>
+        
+        <div class="game-controls">
+            <div class="mode-selector">
+                <button class="mode-btn active" id="pvp-mode">Player vs Player</button>
+                <button class="mode-btn" id="pvc-mode">Player vs Computer</button>
+            </div>
+            
+            <div class="game-info">
+                <div class="current-player" id="current-player">Current Player: X</div>
+                <div class="score-board">
+                    <div class="score">X Wins: <span id="x-score">0</span></div>
+                    <div class="score">O Wins: <span id="o-score">0</span></div>
+                    <div class="score">Draws: <span id="draw-score">0</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-board" id="game-board">
+            <button class="cell" data-index="0"></button>
+            <button class="cell" data-index="1"></button>
+            <button class="cell" data-index="2"></button>
+            <button class="cell" data-index="3"></button>
+            <button class="cell" data-index="4"></button>
+            <button class="cell" data-index="5"></button>
+            <button class="cell" data-index="6"></button>
+            <button class="cell" data-index="7"></button>
+            <button class="cell" data-index="8"></button>
+        </div>
+
+        <button class="reset-btn" id="reset-btn">Reset Game</button>
+        
+        <div class="game-message" id="game-message"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
