@@ -1,0 +1,213 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.stopwatch {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+/* Time Display */
+.time-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Courier New', monospace;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #e9ecef;
+}
+
+/* Control Buttons */
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.start {
+    background: #28a745;
+    color: white;
+}
+
+.start:hover:not(:disabled) {
+    background: #218838;
+}
+
+.pause {
+    background: #ffc107;
+    color: #333;
+}
+
+.pause:hover:not(:disabled) {
+    background: #e0a800;
+}
+
+.reset {
+    background: #dc3545;
+    color: white;
+}
+
+.reset:hover:not(:disabled) {
+    background: #c82333;
+}
+
+.lap {
+    background: #007bff;
+    color: white;
+}
+
+.lap:hover:not(:disabled) {
+    background: #0056b3;
+}
+
+/* Lap Section */
+.lap-section {
+    text-align: left;
+}
+
+.lap-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.lap-list {
+    max-height: 300px;
+    overflow-y: auto;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.lap-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+    font-family: 'Courier New', monospace;
+}
+
+.lap-item:last-child {
+    border-bottom: none;
+}
+
+.lap-number {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.lap-time {
+    font-weight: bold;
+    color: #333;
+}
+
+.no-laps {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .stopwatch {
+        padding: 30px 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .time-display {
+        font-size: 2.5rem;
+        padding: 15px;
+    }
+    
+    .controls {
+        gap: 10px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        min-width: 80px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Scrollbar styling */
+.lap-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lap-list::-webkit-scrollbar-track {
+    background: #e9ecef;
+    border-radius: 10px;
+}
+
+.lap-list::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+}
+
+.lap-list::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
